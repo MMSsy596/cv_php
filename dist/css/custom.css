@@ -1,0 +1,14 @@
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #007bff; /* Màu nền của mục active */
+    color: #fff; /* Màu chữ của mục active */
+    font-weight: bold; /* Làm đậm chữ */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #343a40; /* Màu mặc định cho các mục menu khác */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+}
