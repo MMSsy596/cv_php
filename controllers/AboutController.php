@@ -10,9 +10,15 @@ class AboutController {
     }
 
     public function getUserInfo() {
-        $query = "SELECT * FROM users WHERE id = 1";
+        $query = "SELECT * FROM users WHERE id = :user_id";
+
+
         $stmt = $this->db->prepare($query);
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        echo "$query";
         $stmt->execute();
+  
+
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;
     }

@@ -16,5 +16,17 @@ class UserController {
         $stmt->execute(['id' => $userId]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function update($id, $name, $email, $image, $phone, $address, $bio) {
+        $stmt = $this->pdo->prepare("UPDATE users SET name = :name, email = :email, image = :image, phone = :phone, address = :address, bio = :bio WHERE id = :id");
+        $stmt->execute([
+            'name' => $name,
+            'email' => $email,
+            'image' => $image,
+            'phone' => $phone,
+            'address' => $address,
+            'bio' => $bio,
+            'id' => $id
+        ]);
+    }
 }
 ?>

@@ -11,9 +11,14 @@ $userController = new UserController($pdo);
 $blogController = new BlogController($pdo);
 $selectedUser = null;
 
+if (isset($_SESSION['user_id'])) {
+    $selectedUser = $userController->show($_SESSION['user_id']);
+    $blogs = $blogController->getBlogsByUserId($selectedUser['id']);
+}
 if (isset($_GET['user_id'])) {
     $selectedUser = $userController->show($_GET['user_id']);
-    $blogs = $blogController->getBlogs($selectedUser['id']);
+    $blogs = $blogController->getBlogsByUserId($selectedUser['id']);
+
 }
 ?>
 

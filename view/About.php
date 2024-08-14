@@ -34,6 +34,7 @@ if (isset($_GET['user_id'])) {
 
                 
                 <?php if ($selectedUser): ?>
+                    <img src="<?php echo $selectedUser['image']; ?>">
                     <p><strong>Name:</strong> <?php echo htmlspecialchars($selectedUser['name']); ?></p>
                     <p><strong>Email:</strong> <?php echo htmlspecialchars($selectedUser['email']); ?></p>
                     <p><strong>Bio:</strong> <?php echo htmlspecialchars($selectedUser['bio']); ?></p>
@@ -45,3 +46,14 @@ if (isset($_GET['user_id'])) {
     </div>
 </body>
 </html>
+<?php
+// Khi người dùng được chọn, lưu ID vào session
+if (isset($_GET['user_id'])) {
+    $_SESSION['user_id'] = intval($_GET['user_id']);
+}
+
+// Khi người dùng được chọn, lưu ID vào session
+if (isset($_GET['user_id'])) {
+    $_SESSION['user_id'] = intval($_GET['user_id']);
+}
+?>

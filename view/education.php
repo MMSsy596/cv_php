@@ -1,20 +1,29 @@
 <?php
-session_start(); // Bắt đầu phiên làm việc
 require_once '../config/config.php';
-require_once '../controllers/UserController.php';
 require_once '../controllers/EducationController.php';
+require_once '../controllers/UserController.php';
 
 
 $userController = new UserController($pdo);
-$educationController = new EducationController($pdo);
 $selectedUser = null;
 
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+$educationController = new EducationController($pdo);
+
+if (isset($_SESSION['user_id'])) {
+    $education = $educationController->getEducationByUserId($_SESSION['user_id']);
+    $selectedUser = $userController->show($_SESSION['user_id']);
+
+}
 if (isset($_GET['user_id'])) {
+    $education = $educationController->getEducationByUserId($_GET['user_id']);
     $selectedUser = $userController->show($_GET['user_id']);
-    $education = $educationController->getEducation($selectedUser['id']);
+
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +46,7 @@ if (isset($_GET['user_id'])) {
                         <ul>
                             <?php foreach ($education as $edu): ?>
                                 <li>
-                                    <h3><?php echo htmlspecialchars($edu['degree']); ?> at <?php echo htmlspecialchars($edu['school']); ?></h3>
+                                        <h3><?php echo htmlspecialchars($edu['degree']); ?> at <?php echo htmlspecialchars($edu['school']); ?></h3>
                                     <p>Graduated: <?php echo htmlspecialchars($edu['graduation_year']); ?></p>
                                 </li>
                             <?php endforeach; ?>
