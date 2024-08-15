@@ -118,7 +118,7 @@ if (isset($_SESSION['user_id'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
-                        <a class="nav-link" href="../view/index.php">Home</a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'About.php' ? 'active' : ''; ?>">
                         <a class="nav-link" href="../view/edit_profile.php">Edit Profile</a>
@@ -145,7 +145,7 @@ if (isset($_SESSION['user_id'])) {
     </a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="About.php">Exit edit</a>
-        <a class="dropdown-item" href="About.php">Logout</a>
+        <a class="dropdown-item" href="index.php">Logout</a>
     </div>
 </div>
 

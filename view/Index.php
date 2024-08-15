@@ -85,4 +85,7 @@ $projects = $homeController->getRecentProjects();
         </ul>
     </div>
 </body>
+<footer>
+    <?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>

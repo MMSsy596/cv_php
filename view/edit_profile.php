@@ -72,4 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="../plugins/jquery/jquery.min.js"></script>
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+<footer>
+    <?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>

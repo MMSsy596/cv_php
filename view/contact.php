@@ -50,4 +50,6 @@ if (isset($_GET['user_id'])) {
         </div>
     </div>
 </body>
+<footer><?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>

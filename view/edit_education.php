@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include '../view/templates/header.php'; ?>
+    <?php include '../view/templates/header1.php'; ?>
 </head>
 <body>
    
@@ -81,4 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </tbody>
     </table>
 </body>
+<footer>
+    <?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>

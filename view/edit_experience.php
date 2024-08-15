@@ -97,4 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 </body>
+<footer>
+    <?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>

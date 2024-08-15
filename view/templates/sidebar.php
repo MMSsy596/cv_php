@@ -16,8 +16,7 @@ if (isset($_GET['user_id'])) {
 } elseif (!isset($_SESSION['user_id']) && !empty($users)) {
     // Nếu chưa có user_id nào trong session, chọn người dùng đầu tiên
     $_SESSION['user_id'] = $users[0]['id'];
-}
-echo $_SESSION["user_id"]; 
+} 
 ?>
 
 <!-- Hiển thị danh sách người dùng -->

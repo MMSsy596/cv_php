@@ -26,6 +26,8 @@ if (isset($_GET['user_id'])) {
             <!-- Sidebar -->
             <div class="col-md-3">
                 <?php include '../view/templates/sidebar.php'; ?>
+                <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+                <link rel="stylesheet" href="../dist/css/adminlte.min.css">
             </div>
             
             <!-- Main Content -->
@@ -45,6 +47,10 @@ if (isset($_GET['user_id'])) {
         </div>
     </div>
 </body>
+
+<footer>
+<?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>
 <?php
 // Khi người dùng được chọn, lưu ID vào session

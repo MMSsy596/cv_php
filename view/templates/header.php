@@ -104,6 +104,16 @@ if (isset($_SESSION['user_id'])) {
         .col-md-9 img{
             width: 140px;
         }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -111,14 +121,14 @@ if (isset($_SESSION['user_id'])) {
     <nav class="navbar navbar-expand-lg navbar-light bg-light"
             style="background: #1fc11ddd !important;"
 >
-            <a class="navbar-brand" href="index.php">My Portfolio</a>
+            <a class="navbar-brand" href="../index.php">My Portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">
-                        <a class="nav-link" href="../view/index.php">Home</a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'About.php' ? 'active' : ''; ?>">
                         <a class="nav-link" href="../view/About.php">About Me</a>
@@ -147,7 +157,7 @@ if (isset($_SESSION['user_id'])) {
     </a>
     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="edit_profile.php">Edit Profile</a>
-        <a class="dropdown-item" href="#">Logout</a>
+        <a class="dropdown-item" href="../index.php">Logout</a>
     </div>
 </div>
 
@@ -165,4 +175,6 @@ if (isset($_SESSION['user_id'])) {
     <!-- AdminLTE App -->
     <script src="../dist/js/adminlte.min.js"></script>
 </body>
+
+
 </html>

@@ -54,7 +54,7 @@ if (isset($_GET['delete_id'])) {
                     <tr id="row-<?php echo $blog['id']; ?>">
                         <td><?php echo htmlspecialchars($blog['title']); ?></td>
                         <td><?php echo htmlspecialchars($blog['content']); ?></td>
-                        <td>                <img src="<?php echo $blog['image']; ?>" alt="<?php echo $project['title']; ?>" width="200px">
+                        <td>                <img src="<?php echo $blog['image']; ?>" alt="<?php echo $blog['title']; ?>" width="200px">
                         </td>
         
                         <td>
@@ -77,4 +77,7 @@ if (isset($_GET['delete_id'])) {
 
 
 </body>
+<footer>
+    <?php include '../view/templates/footer.php'; ?>
+</footer>
 </html>
